@@ -1,0 +1,35 @@
+{
+	// Place your lp ワークスペース snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+
+	"Slide parent":{
+		"prefix": "slp",
+		"body": [
+			"/* ",
+			"横スクロール", 
+			"※子要素の横幅が親よりも大きくないとoverflowが機能しない", 
+			"初期は「white-space: nowrap」で子要素の幅を増やしているが、", 
+			"子要素にwidthを指定した方が何かと便利。", 
+			"*/",
+			"display: flex;",
+			"overflow-x: scroll;",
+			"${1:white-space: nowrap;}"
+		],
+		"description": "横スクロールレイアウト親。子「Slide child」と一緒に使う。"
+	}
+}
